@@ -1,7 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
-#include<stdlib.h>
+#include <stdlib.h>
+#include <string>
 
 using namespace std;
 
@@ -44,10 +45,8 @@ int main() {
                     while (!myFile.eof()) {
                         for (int i = 0; i < 11; i++) {
                             for (int j = 0; j < 3; j++) {
-
-
                                 //myFile.ignore();
-                                getline(myFile, soccerTeam[i][j]);
+                                std::getline(myFile, soccerTeam[i][j]);
                             }
                         }
 
@@ -79,7 +78,7 @@ int main() {
 
 
             case '5':
-
+                myFile.close();
                 exit(0);
 
             default:
